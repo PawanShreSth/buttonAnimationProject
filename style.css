@@ -28,6 +28,27 @@ body {
              grow 1s ease-in-out infinite;
 }
 
+.btn:focus {
+  animation: fly-away 500ms ease-in-out forwards;
+}
+
+@keyframes fly-away {
+  33% {
+    transform: translate(100px, 50px) rotate(30deg)
+    scale(.9);
+  }
+
+  66% {
+    transform: translate(0, 25px) rotate(90deg)
+    scale(.75);
+  }
+
+  100% {
+    transform: translate(-100px, -75px) rotate(200deg)
+    scale(.25);
+  }
+}
+
 @keyframes blink {
   0% {
     opacity: 1;
@@ -49,5 +70,9 @@ body {
 
   50% {
     transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }
